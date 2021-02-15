@@ -1,0 +1,230 @@
+/* VARIABLES */
+:root{
+    --colorPrincipal: #B2FDD3;
+    --colorSecundario: #2AB69D;
+    --colorFooter: #D2DBDD;
+    --colorObscuro: #000;
+    --colorGris: #D2DBDD;
+    --fuenteAppointment: 'Josefin Sans', sans-serif;
+    --fuenteTexto: 'Raleway', sans-serif;
+}
+
+/* GLOBALES */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {    
+    box-sizing: inherit; /*PARA QUE NO AFECTE EL TAMAÑO DEL ELEMENTO*/
+  }
+
+body{
+    font-size: 16px; /*1 rem == 10px*/
+    font-family: var(--fuenteTexto);
+}
+h1{
+  font-size: 3.8rem;
+  font-family: var(--fuenteAppointment);
+}
+
+h2{
+  font-size: 2.8rem;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+/* RECURSOS */
+.boton{
+    background-color: var(--colorPrincipal);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 90%;
+}
+/* CLASES HEADER */
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url(../img/IndexHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+    height: 47rem;
+    margin-bottom: 3rem;
+}
+
+.barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 4rem 0 4rem;
+    }
+}
+
+.logo a{
+    color: white;
+}
+
+.logo a:hover{
+    transition: color, 1.4s ease;
+    color: var(--colorPrincipal);
+}
+
+.nav a{
+    font-size: 1.7rem;
+    color: var(--colorPrincipal);
+    margin-right: 2rem;
+}
+
+.nav a:last-of-type{
+    margin-right: 0;
+}
+
+.nav a:hover{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-texto{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 22rem 0 0 0;
+}
+
+.header-texto h2{
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .header-texto{
+        font-size: 2rem;
+    }
+}
+
+.header-texto a{
+    font-size: 2rem;
+    color: var(--colorObscuro);
+}
+
+.header-texto a:hover{
+    color: white;
+    background-color: var(--colorSecundario);
+    font-size: 2.1rem;
+}
+
+/* MAIN-SECTORES */
+
+@media (min-width: 768px) {
+    .sectores{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        margin: 3rem 0;
+    }
+}
+
+
+.card{
+    border: 0 solid;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card img{
+    border-radius: 2rem;
+}
+.card h3{
+    text-align: start;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+/* SECCION UNIRSE  */
+.dos-columnas{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.unete{
+    border-radius: 2rem;
+    flex-basis: calc(50% - 1rem);
+}
+@media (min-width: 768px) {
+    .dos-columnas{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .unete{
+        border-radius: 2rem;
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+/* FOOTER */
+.bg-footer{
+    margin-top: 3rem;
+    padding: 4rem 0;
+    background-color: var(--colorGris);
+}
+
+.contenido-footer a{
+    display: flex;
+    padding: 0;
+    color: var(--colorObscuro);
+}
+
+.iconos{
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dos-columnas-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .columnas-flex{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .dos-columnas-flex{
+        flex-basis: calc(50% - 1rem);
+    }
+    .tres-columnas-flex{
+    flex-basis: calc(33.3% - 1rem);
+    }
+}
