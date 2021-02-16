@@ -26,6 +26,7 @@ li a:hover{
 
 /*Header*/
 .head{
+    z-index: 50;
     top: 0;
     position: fixed;
     width: 100%;
@@ -52,7 +53,7 @@ li a:hover{
     font-size: 20px;
     letter-spacing: 2px;
 }
-.navegacion li:nth-child(2){
+.navegacion li{
     margin-left: 35px;
 }
 
@@ -83,7 +84,6 @@ li a:hover{
 .forget:hover{
     color: var(--colorPrincipal);
 }
-
 .vista{
     margin-top: 130px;
     margin-bottom: 30px;
@@ -94,14 +94,15 @@ li a:hover{
     margin: 100px auto;
 }
 .card{
+    margin-top: 30px;
     background: #fff;
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 30px;
     /*height: 300px;*/
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 .card-login{
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
 }
 
@@ -124,6 +125,9 @@ input[type="text"], input[type="tel"], input[type=password]{
     padding: 5px 10px;
     font-family: var(--fuenteTexto);
     margin: 0 30px 20px 30px;
+}
+input#buscar{
+    margin: 0 10px;
 }
 textarea#descripcion{
     border: 2px solid #536A6D;
@@ -204,9 +208,14 @@ textarea#descripcion{
 .boton{
     border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 5px;
     font-size: 18px;
     margin: 0 25px;
+}
+.btn-buscar{
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
 }
 .btn-ok{
     background: var(--colorSecundario);
@@ -421,4 +430,37 @@ textarea#descripcion{
     margin-bottom: 0;
     font-weight: 500;
     color: rgba(81, 86, 93, 0.7);
+}
+
+/********************************************************* Main cliente *************************************************/
+h2{
+    font-family: var(--fuenteTexto);
+    font-size: 22px;
+}
+.titulo-seccion{
+    margin: 50px 0 0 0;
+}
+h4{
+    font-size: 20px;
+    font-family: var(--fuenteTexto);
+}
+
+
+/*Footer*/
+
+footer{
+    background: var(--colorPrincipal);
+    padding-top: 30px;
+}
+.logo-footer{
+    color: #fff;
+    font-family: var(--fuenteAppointment);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.copy{
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
 }
