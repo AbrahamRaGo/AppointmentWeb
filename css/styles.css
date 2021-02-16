@@ -64,7 +64,7 @@ a{
     width: 90%;
 }
 /* CLASES HEADER */
-.hero{
+.bg-hero{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
      url(../img/IndexHeader.jpg);
     background-repeat: no-repeat;
@@ -74,14 +74,14 @@ a{
     margin-bottom: 3rem;
 }
 
-.barra{
+.barra-index{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @media (min-width: 768px) {
-    .barra{
+    .barra-index{
         flex-direction: row;
         justify-content: space-between;
         padding: 1rem 4rem 0 4rem;
@@ -94,7 +94,7 @@ a{
 
 .logo a:hover{
     transition: color, 1.4s ease;
-    color: var(--colorPrincipal);
+    color: var(--colorSecundario);
 }
 
 .nav a{
@@ -200,7 +200,7 @@ a{
     .dos-columnas-grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
+        gap: 2rem;
     }
     .columnas-flex{
         display: flex;
@@ -215,4 +215,37 @@ a{
         text-align: center;
         margin: 7rem 0 0 0;
     }
+}
+
+
+/*---------------------------------------------------------REGISTRO----------------------------------------------------------*/
+
+.barra-sticky{
+    z-index: 50;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 8rem;
+    background-color: var(--colorSecundario);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-registro{
+    background: #fff;
+    width: 100%;
+    padding: 3rem 3rem;
+    box-shadow: 0 .4rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.textbox{
+    border: 2px solid #536A6D;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+    font-family: var(--fuenteTexto);
+}
+
+.drop-column-grid-input{
+    grid-column: 1/3;
 }

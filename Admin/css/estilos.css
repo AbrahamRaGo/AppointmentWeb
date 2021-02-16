@@ -211,6 +211,9 @@ textarea#descripcion{
     padding: 5px;
     font-size: 18px;
     margin: 0 25px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
 }
 .btn-buscar{
     border: none;
