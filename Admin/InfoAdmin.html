@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<header class="head container-fluid">
+    <div class="row align-items-center">
+        <div class="logo col">
+            <div class="logo-appointment">Appointment</div>
+        </div>
+        <nav class="navegacion col-7">
+            <ul class="nav">
+                <li ><a href="IndexAdmin.html">Agenda</a></li>
+                <li ><a class="activo" href="InfoAdmin.html">Información</a></li>
+            </ul>
+        </nav>
+        <div class="perfil col container">
+            <img src="../img/edward-cisneros-_H6wpor9mjs-unsplash.jpg" alt="" class="img-perfil">
+        </div>
+    </div>
+</header>
+<div class="contenedor">
+    <h1 class="vista">
+        Información del negocio
+    </h1>
+    <div class="card">
+        <div class="container-fluid">
+            <div class="row">
+                <input class="col-5" type="text" name="Nombre-negocio" id="negocio" placeholder="Nombre del negocio">
+                <input class="col" type="text" name="Nombre-prestador" id="prestador" placeholder="Nombre del prestador">
+                <input class="col-7"  type="text" name="direecion" id="direccion" placeholder="Dirección">
+                <input class="col"  type="tel" name="telefono" id="telefono" placeholder="Telefono">
+            </div>
+        </div>
+        <textarea name="descripcion" id="descripcion" cols="20" rows="10" placeholder="Descripción"></textarea>
+        <div class="productos">
+            <p>¿Vende productos?</p>
+            <label class="content-input">
+                <input type="radio" name="productos" id="si" value="Si">Si
+                <i></i>
+            </label>
+            <label class="content-input">
+                <input type="radio" name="productos" id="no" value="No">No
+                <i></i>
+            </label>
+
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <input class="boton btn-red col-2" type="button" value="Cancelar">
+                <input class="boton btn-ok col-2" type="button" value="Guardar">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
