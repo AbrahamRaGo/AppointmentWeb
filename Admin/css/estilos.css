@@ -38,6 +38,7 @@ li a:hover{
 .logo-appointment{
     font-family: var(--fuenteAppointment);
     font-size: 32px;
+    margin: 15px 40px;
 }
 .activo{
     color: var(--colorSecundario);
@@ -67,6 +68,22 @@ li a:hover{
 }
 
 /*Contenido principal*/
+
+/*Login*/
+.forget{
+    color: var(--colorSecundario);
+    text-align: center;
+}
+.iniciar{
+    font-family: var(--fuenteTexto);
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.forget:hover{
+    color: var(--colorPrincipal);
+}
+
 .vista{
     margin-top: 130px;
     margin-bottom: 30px;
@@ -83,6 +100,10 @@ li a:hover{
     /*height: 300px;*/
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
+.card-login{
+    width: 400px;
+    margin: 0 auto;
+}
 
 /*Inputs*/
 /*Reseteo*/
@@ -96,7 +117,7 @@ input:focus, input.form-control:focus, textarea:focus{
 }
 
 /**/
-input[type="text"], input[type="tel"]{
+input[type="text"], input[type="tel"], input[type=password]{
     border: 2px solid #536A6D;
     border-radius: 10px;
     font-size: 18px;
@@ -190,6 +211,11 @@ textarea#descripcion{
 .btn-ok{
     background: var(--colorSecundario);
     color: #fff;
+}
+.btn-ok-light{
+    background: #fff;
+    border: 2px solid var(--colorSecundario);
+    color: var(--colorSecundario);
 }
 .btn-red{
     background: var(--colorRed);
