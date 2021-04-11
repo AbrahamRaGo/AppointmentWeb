@@ -1,0 +1,87 @@
+<div class="row mt-4">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>Servicios</h3>
+            </div>
+            <div class="card-body">
+                <form action="/admin/services" method="POST">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="text" name="search" id="search" placeholder="Filtrar">
+                        <button class="btn btn-info" type="button"><span class="fas fa-search"></span></button>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Costo</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Corte</td>
+                                <td>$120</td>
+                                <td>Corte de pelo a gusto de cliente</td>
+                                <td>
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-around">
+                                            <span class="fas fa-trash"></span>
+                                            <span class="fas fa-pen"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Tinte</td>
+                                <td>$300</td>
+                                <td>Tinte de pelo con decoloración</td>
+                                <td>
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-around">
+                                            <span class="fas fa-trash"></span>
+                                            <span class="fas fa-pen"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Alisado</td>
+                                <td>$250</td>
+                                <td>Alisado común</td>
+                                <td>
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-around">
+                                            <span class="fas fa-trash"></span>
+                                            <span class="fas fa-pen"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Peinado</td>
+                                <td>$250</td>
+                                <td>Peinado para evento, su precio puede cambiar dependiendo la complejidad</td>
+                                <td>
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-around">
+                                            <span class="fas fa-trash"></span>
+                                            <span class="fas fa-pen"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group">
+                        <a class="btn btn-info" href="/admin/createService">Crear nuevo servicio</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
