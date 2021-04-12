@@ -13,30 +13,14 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     {{!-- Custom CSS --}}
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <title>Appintment || Admin</title>
 </head>
 <body>
-    <header class="container">
-        <nav class="navbar navbar-expand-lg navbar-light rounded shadow">
-            <div class="container-fluid">
-                <a href="/" class="navbar-brand">Appointment</a>
-                <ul class="navbar-nav me-auto mb2 mb-lg-0 ">
-                    <li class="nav-item active">
-                        <a href="/admin/calendar" class="nav-link">Citas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/services" class="nav-link">Servicios</a>
-                    </li>
-                </ul>
-                <span class="navbar-text">
-                    Eduardo Castañeda
-                    <a href="/users/signin"><span class="fas fa-sign-out-alt ml-2"></span></a>
-                </span>
-            </div>
-        </nav>
-    </header>
 
+    <header>
+        {{> navigationAdmin}}
+    </header>
     <main class="container">
         {{{body}}}
     </main>
