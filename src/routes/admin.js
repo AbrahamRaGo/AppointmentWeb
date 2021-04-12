@@ -9,4 +9,7 @@ router.get('/admin/services', (req, res) =>{
     res.render('admin/services');
 });
 
+router.get('/admin/calendar', (req, res) =>{
+    res.render('admin/calendar');
+});
 module.exports = router;
