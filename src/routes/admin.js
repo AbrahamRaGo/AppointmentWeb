@@ -17,14 +17,11 @@ router.get('/admin/calendar', (req, res) =>{
 });
 
 router.post('/admin/createService', async (req, res) =>{
-    const {name, cost, description} = req.body;
-    if (name && cost && description) {
-        const newService = new Service({ name, cost, description });
+    const {service, cost, description} = req.body;
+
+        const newService = new Service({ service, cost, description });
         await newService.save();
-        res.redirect('admin/services')
-    } else {
-        res.send('Error')
-    }
+        res.redirect('/admin/services')
     
 })
 module.exports = router;
