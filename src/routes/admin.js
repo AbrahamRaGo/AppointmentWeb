@@ -1,3 +1,4 @@
+
 const express = require("express");
 const router = express.Router();
 
@@ -12,4 +13,9 @@ router.get('/admin/services', (req, res) =>{
 router.get('/admin/calendar', (req, res) =>{
     res.render('admin/calendar');
 });
+
+router.post('/admin/createService', (req, res) =>{
+    console.log(req.body);
+    res.send('ok')
+})
 module.exports = router;
