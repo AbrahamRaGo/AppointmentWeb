@@ -20,10 +20,11 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {{#each services}}
                             <tr>
-                                <td>Corte</td>
-                                <td>$120</td>
-                                <td>Corte de pelo a gusto de cliente</td>
+                                <td>{{service}}</td>
+                                <td>${{cost}}</td>
+                                <td>{{description}}</td>
                                 <td>
                                     <div class="container-fluid">
                                         <div class="row justify-content-around">
@@ -33,48 +34,7 @@
                                     </div>
                                 </td>
                             </tr>
-
-                            <tr>
-                                <td>Tinte</td>
-                                <td>$300</td>
-                                <td>Tinte de pelo con decoloración</td>
-                                <td>
-                                    <div class="container-fluid">
-                                        <div class="row justify-content-around">
-                                            <span class="fas fa-trash"></span>
-                                            <span class="fas fa-pen"></span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Alisado</td>
-                                <td>$250</td>
-                                <td>Alisado común</td>
-                                <td>
-                                    <div class="container-fluid">
-                                        <div class="row justify-content-around">
-                                            <span class="fas fa-trash"></span>
-                                            <span class="fas fa-pen"></span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Peinado</td>
-                                <td>$250</td>
-                                <td>Peinado para evento, su precio puede cambiar dependiendo la complejidad</td>
-                                <td>
-                                    <div class="container-fluid">
-                                        <div class="row justify-content-around">
-                                            <span class="fas fa-trash"></span>
-                                            <span class="fas fa-pen"></span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                            {{/each}}
                         </tbody>
                     </table>
                     <div class="form-group">
