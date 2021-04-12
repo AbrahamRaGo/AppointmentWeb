@@ -8,6 +8,6 @@ header .navbar{
     background-color: #dee2e6;
 }
 
-footer, footer .blockquote-footer{
+footer .blockquote-footer{
     color: rgb(75, 73, 73);
 }
