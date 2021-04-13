@@ -3,19 +3,22 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const passport = require("passport");
+
 router.get("/users/signin", (req, res)=>{
     res.render("users/signin");
 }); //ruta para fromulario de ingresar a la sesión.
 
+router.get("/users/signup", (req, res)=>{
+    res.render("users/signup");
+}); //ruta para formulario de autenticación
+
 router.post("/users/signin", passport.authenticate("local",{
-    successRedirect: "client/schedule",
+    successRedirect: "/client/agenda",
     failureRedirect: "/users/signin",
     failureFlash: true
 }));
 
-router.get("/users/signup", (req, res)=>{
-    res.render("users/signup");
-}); //ruta para formulario de autenticación
+
 
 router.post("/users/signup", async (req, res) =>{
     const {name, email, password, confirm_password} = req.body;
