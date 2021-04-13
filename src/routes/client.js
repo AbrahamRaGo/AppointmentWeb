@@ -19,7 +19,6 @@ router.post('/client/createAppointment', async (req, res) => {
     }
     else{
         const newAppointment = new Appointment({ nameClient, emailClient, service, date, time });
-        console.log(newAppointment)
         await newAppointment.save();
         req.flash("success_msg", "Cita creada correctamente");
         res.redirect("/client/createAppointment");
