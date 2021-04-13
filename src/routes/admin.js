@@ -16,10 +16,17 @@ router.get("/admin/services", async (req, res) => {
 
 router.post("/admin/createService", async (req, res) => {
   const { service, cost, description } = req.body;
-  if (!service || !cost) {
-    req.flash("error_msg", "Los campos nombre y costo no deben estar vacíos");
-    res.redirect("/admin/createService");
-  } else {
+  const errors = [];
+  if (!service) {
+    errors.push({text: "Por favor inserta un nombre"});
+  }
+  if (!cost) {
+    errors.push({text: "Por favor inserta un costo"});  
+  } 
+  if(errors.length > 0){
+    res.render("admin/createService", {errors, service, cost, description, layout: "admin"});
+  }
+  else {
     const newService = new Service({ service, cost, description });
     await newService.save();
     req.flash("success_msg", "Servicio agregado correctamente");
@@ -35,9 +42,10 @@ router.get("/admin/update/:id", async (req, res) => {
 router.put("/admin/updateService/:id", async (req, res) => {
   const { service, cost, description } = req.body;
   if (!service || !cost) {
-    req.flash("error_msg", "Los campos nombre y costo no deben estar vacíos");
-    res.redirect(`/admin/update/${req.params.id}`);
-  } else {
+    req.flash("error_msg", "Nombre y costo no deben quedar vacios")
+    res.redirect(`/admin/update/${req.params.id}`)
+  }
+  else {
     await Service.findByIdAndUpdate(req.params.id, {
       service,
       cost,
