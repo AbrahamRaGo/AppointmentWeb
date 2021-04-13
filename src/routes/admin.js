@@ -42,7 +42,7 @@ router.get("/admin/update/:id", async (req, res) => {
 router.put("/admin/updateService/:id", async (req, res) => {
   const { service, cost, description } = req.body;
   if (!service || !cost) {
-    req.flash("error_msg", "Nombre y costo no deben quedar vacios")
+    req.flash("error", "Nombre y costo no deben quedar vacios")
     res.redirect(`/admin/update/${req.params.id}`)
   }
   else {
@@ -64,7 +64,7 @@ router.get("/admin/delete/:id", async (req, res) => {
 
 router.get("/admin/deleteApp/:id", async (req, res) => {
   await Appointment.findByIdAndDelete(req.params.id);
-  req.flash("success_msg", "Cita eliminado correctamente");
+  req.flash("success_msg", "Cita eliminada correctamente");
   res.redirect("../../admin/calendar");
 });
 

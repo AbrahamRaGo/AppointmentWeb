@@ -15,17 +15,18 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Correo</th>
                                 <th scope="col">Servicio</th>
-                                <th scope="col">Fecha y hora</th>
-                                <th scope="col">Acciones</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
                             </tr>
                         </thead>
                         <tbody>
                             {{#each appointments}}
                             <tr>
-                                <td>{{name}}</td>
-                                <td>{{mail}}</td>
+                                <td>{{nameClient}}</td>
+                                <td>{{emailClient}}</td>
                                 <td>{{service}}</td>
                                 <td>{{date}}</td>
+                                <td>{{time}}</td>
                                 <td>
                                     <div class="container-fluid">
                                         <div class="row justify-content-around">
