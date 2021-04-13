@@ -1,8 +1,8 @@
-    <div class="jumbotron my-4 bg-light text-center">
-    <h1>Agenda tu cita en Appointment</h1>
+<div class="jumbotron my-4 bg-light text-center">
+	<h1>Agenda tu cita en Appointment</h1>
 
-	<div class="date-picker">
-		<div class="selected-date"></div>
+	{{!-- <div class="date-picker"> --}}
+		{{!-- <div class="selected-date"></div>
 
 		<div class="dates">
 			<div class="month">
@@ -12,7 +12,23 @@
 			</div>
 
 			<div class="days"></div>
-		</div>
+		</div> --}}
+		{{!--
+	</div> --}}
+
+	<div class="container">
+		<form action="client/createAgenda">
+			<div class="row">
+				<div class="form-group col">
+					<input class="form-control" type="date" name="date" id="date">
+				</div>
+				<div class="form-group col">
+					<input class="form-control" type="time" name="time" id="time" min="09:00" max="07:00">
+				</div>
+			</div>
+			<div class="form-group mt-4">
+				<button class="btn btn-primary" type="submit">Agenda</button>
+			</div>
+		</form>
 	</div>
-    </div>
- 
+</div>
