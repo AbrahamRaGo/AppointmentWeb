@@ -60,4 +60,16 @@ router.get("/admin/calendar", async (req, res) => {
   res.render("admin/calendar", { appointments, layout: "admin" });
 });
 
+// Ruta para filtrado
+router.post("/admin/search", async (req, res) => {
+  const {search} = req.body;
+  if (!search) {
+    const services = await Service.find();
+    res.render("admin/services", { services, layout: "admin" });
+  } else {
+    const services = await Service.find({service: search});
+    res.render("admin/services", { services, layout: "admin" });
+  }
+})
+
 module.exports = router;
