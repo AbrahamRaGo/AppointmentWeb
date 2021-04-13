@@ -12,28 +12,28 @@ router.get('/client/createAppointment', async (req, res)=>{
 
 router.post('/client/createAppointment', async (req, res) => {
     console.log(req.body)
-    const {nameClient, mailClient, date, time, service} = req.body;
+    const {nameClient, emailClient, date, time, service} = req.body;
     const errors = []
     if (!nameClient) {
         errors.push({text: "Debe ingresar su nombre"})
     }
-    if (!mailClient) {
+    if (!emailClient) {
         errors.push({text: "Debe ingresar su correo"})
     }
     if (!date) {
         errors.push({text: "Debe ingresar una fecha"})
     }
-    if (!time != "Seleccionar") {
+    if (time == "Seleccionar") {
         errors.push({text: "Debe ingresar una hora"})
     }
-    if (service != "Seleccionar") {
+    if (service == "Seleccionar") {
         errors.push({text: "Debe seleccionar un servicio"})
     }
     if (errors.length > 0) {
-        res.render("client/createAppointment", {errors, layout: "main"})
+        res.render("client/createAppointment", {errors})
     }
     else{
-        const newAppointment = new Appointment({ nameClient, mailClient, service, date, time });
+        const newAppointment = new Appointment({ nameClient, emailClient, service, date, time });
         await newAppointment.save();
         req.flash("success_msg", "Cita creada correctamente");
         res.redirect("/client/createAppointment");
