@@ -13,7 +13,7 @@ router.get("/users/signup", (req, res)=>{
 }); //ruta para formulario de autenticación
 
 router.post("/users/signin", passport.authenticate("local",{
-    successRedirect: "/client/agenda",
+    successRedirect: "/admin/calendar",
     failureRedirect: "/users/signin",
     failureFlash: true
 }));
