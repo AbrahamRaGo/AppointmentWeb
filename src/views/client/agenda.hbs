@@ -18,7 +18,16 @@
 
 	<div class="container">
 		<form action="client/createAppointment" method="POST">
-			<div class="row">
+				<div class="row">
+				<div class="form-group col">
+					<input type="text" class="form-control" name="nameClient" placeholder="Nombre">
+				</div>
+				<div class="form-group col">
+					<input type="email" class="form-control" name="emailClient" placeholder="Correo electrónico">
+				</div>
+				</div>
+
+				<div class="row">
 				<div class="form-group col">
 					<input class="form-control" type="date" name="date" id="date">
 				</div>
