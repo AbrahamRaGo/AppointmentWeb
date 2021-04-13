@@ -62,6 +62,12 @@ router.get("/admin/delete/:id", async (req, res) => {
   res.redirect("/admin/services");
 });
 
+router.get("/admin/deleteApp/:id", async (req, res) => {
+  await Appointment.findByIdAndDelete(req.params.id);
+  req.flash("success_msg", "Cita eliminado correctamente");
+  res.redirect("../../admin/calendar");
+});
+
 // Ruta para citas, (Unicamente mostrar)
 router.get("/admin/calendar", async (req, res) => {
   const appointments = await Appointment.find();
